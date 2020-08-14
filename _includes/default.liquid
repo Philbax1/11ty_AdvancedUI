@@ -2,10 +2,14 @@
   <head>
     <meta charset="utf-8" />
     <title>Site Title</title>
-    <link rel="stylesheet" href="./_assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./_assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./_assets/css/cover.css" />
   </head>
   <body>
-    {% include components/nav %}
-    {{content}}
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include components/nav %}
+        {{ content }}
+        {% include components/footer %}
+    </div>
   </body>
 </html>
