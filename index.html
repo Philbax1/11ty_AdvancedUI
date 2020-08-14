@@ -1,20 +1,13 @@
 ---
+layout: default
 title: Giffleball
 images:
   - parrot.gif
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Site Title</title>
-  </head>
-  <body>
-    <h1>Site</h1>
-    <ul>
-      {% for filename in images %}
-      <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a></li>
-      {% endfor %}
-    </ul>
-  </body>
-</html>
+<h1>Site</h1>
+<ul>
+  {% for filename in images %}
+  <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a></li>
+  {% endfor %}
+</ul>
