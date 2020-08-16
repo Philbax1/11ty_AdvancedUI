@@ -3,12 +3,15 @@
     <meta charset="utf-8" />
     <title>Site Title</title>
     <link rel="stylesheet" href="./_assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="./_assets/css/cover.css" />
+    <link rel="stylesheet" href="./_assets/css/site.css" />
+    <script src="./_assets/js/anime.min.js" ></script>
   </head>
   <body>
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <div>
         {% include components/nav %}
-        {{ content }}
+        <div class="container py-3">
+          {{ content }}
+        </div>
         {% include components/footer %}
     </div>
   </body>
