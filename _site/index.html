@@ -39,28 +39,41 @@
         <div class="container py-3">
           
 <h1>Heading</h1>
-<div id="animate">
-  This is where some text would go. I don't know what sort of site this would be
-  yet but it looks cool I guess.
+<p>click the card!</p>
+
+<div class="card-container">
+  <div class="card">
+    <div class="front">
+      Phil
+    </div>
+    <div class="back">
+      Jamie
+    </div>
+  </div>
 </div>
 
-<svg></svg>
-
-<div id="p2">Hello World!</div>
-
 <script>
-document.getElementById("p2").style.color = "blue";
-</script>
 
-<script>
-  let animation = anime({
-  targets: 'svg',
-  translateX: 100,
-  borderRadius: 50,
-  duration: 2000,
-  easing: 'linear',
-  direction: 'alternate'
-});    
+var card = document.querySelector(".card");
+var playing = false;
+
+card.addEventListener('click',function() {
+  if(playing)
+    return;
+  
+  playing = true;
+  anime({
+    targets: card,
+    scale: [{value: 1}, {value: 1.4}, {value: 1, delay: 250}],
+    rotateY: {value: '+=180', delay: 200},
+    easing: 'easeInOutSine',
+    duration: 400,
+    complete: function(anim){
+       playing = false;
+    }
+  });
+});
+
 </script>
 
         </div>
